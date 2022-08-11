@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0059)http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Quiz.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="wf-opensans-n4-active wf-ptserif-n4-active wf-ptserif-i4-active wf-active show"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 2022-07-14 Thu 17:06 -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz (Week 7)</title>
+<meta name="generator" content="Org mode">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="./Quiz (Week 7)_files/bundle.css"><link rel="alternate" type="application/rss+xml" href="https://www.cse.unsw.edu.au/~cs3141/22T2/index.xml" title="RSS for announcements"><script src="./Quiz (Week 7)_files/webfont.js.download" type="text/javascript" async=""></script><script src="./Quiz (Week 7)_files/bundle.js.download" type="text/javascript"></script><script src="./Quiz (Week 7)_files/collapses.js.download" type="text/javascript"></script>
+                                       
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script><link rel="stylesheet" href="./Quiz (Week 7)_files/css" media="all">
+</head>
+<body>
+<div id="preamble" class="status">
+<img src="./Quiz (Week 7)_files/title.png" alt="COMP3141 Software System Design and Implementation" style="position:absolute; left:0px; top:0px; z-index:-1;max-width:800px;width:100%;">
+<p style="text-align:center; font-weight:bold; display:block;">COMP3141: Software System Design and Implementation</p>
+<small style="text-align:center; display:block;">Term 2, 2022</small>
+<hr>
+<ul class="org-ul collapsibleList">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Forum.html">Course Forum</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/index.html">Home</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Zoom.html">Lectures on Zoom</a></li>
+<li style="user-select: none;"><a href="https://webcms3.cse.unsw.edu.au/COMP3141/22T2/outline">Outline</a></li>
+<li style="user-select: none;"><a href="https://www.youtube.com/watch?v=ydebMkfwh7c&amp;list=PL6TClpxvoMHgi9LAf9wesaMJ7syT_JcJ9&amp;index=1">Recorded Lectures</a></li>
+<li style="user-select: none;"><a href="https://webcms3.cse.unsw.edu.au/COMP3141/22T2/resources/74691#schedule">Schedule</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/HaskellSetup.html">Setting up Haskell</a></li>
+<li class="collapsibleListClosed" style="user-select: none;">Assignment 1
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Assignment%2001/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Assignment%2001/Specification.pdf">Specification</a></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Week 1
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2001/Quiz.html">Quiz </a></li>
+<li class="collapsibleListClosed" style="user-select: none;">Lecture
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2001/Lecture/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2001/Lecture/Slides.pdf">Slides</a></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Practical
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2001/Practical/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2001/Practical/Slides.pdf">Slides</a></li>
+</ul></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Week 2
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/">Assigned Reading</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2002/Exercise.html">Exercise </a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2002/Quiz.html">Quiz </a></li>
+<li class="collapsibleListClosed" style="user-select: none;">Lecture
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2002/Lecture/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2002/Lecture/Slides.pdf">Slides</a></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Practical
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2002/Practical/Code.tar.gz">Code.tar</a></li>
+</ul></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Week 3
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2003/Exercise.html">Exercise </a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2003/Quiz.html">Quiz </a></li>
+<li class="collapsibleListClosed" style="user-select: none;">Lecture
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2003/Lecture/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2003/Lecture/Slides.pdf">Slides</a></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Practical
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2003/Practical/Code.tar.gz">Code.tar</a></li>
+</ul></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Week 4
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Exercise.html">Exercise </a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html">Quiz </a></li>
+<li class="collapsibleListClosed" style="user-select: none;">Lecture
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Lecture/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Lecture/Slides.pdf">Slides</a></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Practical
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Practical/Code.tar.gz">Code.tar</a></li>
+</ul></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Week 5
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2005/Exercise.html">Exercise </a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2005/Quiz.html">Quiz </a></li>
+<li class="collapsibleListClosed" style="user-select: none;">Lecture
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2005/Lecture/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2005/Lecture/Slides.pdf">Slides</a></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Practical
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2005/Practical/Code.tar.gz">Code.tar</a></li>
+</ul></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Week 7
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Reading.html">Assigned Reading</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Exercise.html">Exercise </a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Quiz.html">Quiz </a></li>
+<li class="collapsibleListClosed" style="user-select: none;">Lecture
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Lecture/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Lecture/Slides.pdf">Slides</a></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Practical
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Practical/Code.tar.gz">Code.tar</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<script type="text/javascript">CollapsibleLists.apply();</script>
+</div>
+<div id="content">
+<h1 class="title">Quiz (Week 7)</h1>
+<form method="POST" action="https://cgi.cse.unsw.edu.au/~cs3141/cgi-bin/gal/22T2/submit_quiz"><input type="hidden" name="quizname" value="quiz06"><div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Quiz.html#org1b95671">1. Applicatives</a>
+<ul>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Quiz.html#orga697cdd">1.1. Question 1</a></li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Quiz.html#org36f2463">1.2. Question 2</a></li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Quiz.html#org018dc6c">1.3. Question 3</a></li>
+</ul>
+</li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Quiz.html#org30d9959">2. Monads</a>
+<ul>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Quiz.html#org1e4078c">2.1. Question 4</a></li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Quiz.html#org6328bde">2.2. Question 5</a></li>
+</ul>
+</li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Quiz.html#org727f954">3. Functor, Monad, Applicative</a>
+<ul>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Quiz.html#org91028b5">3.1. Question 6</a></li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Quiz.html#org75ed179">3.2. Question 7</a></li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2007/Quiz.html#orge2d0fe3">3.3. Question 8</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org1b95671" class="outline-2">
+<h2 id="org1b95671"><span class="section-number-2">1</span> Applicatives</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orga697cdd" class="outline-3">
+<h3 id="orga697cdd"><span class="section-number-3">1.1</span> Question 1</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Which of the following type definitions are examples of <code>Applicative</code>?
+</p>
+
+<div class="CHECK">
+<ol class="org-ol">
+<li><input type="checkbox" class="rb" name="q1" value="1"><code>Maybe</code></li>
+<li><input type="checkbox" class="rb" name="q1" value="2"><code>String</code></li>
+<li><input type="checkbox" class="rb" name="q1" value="3"><code>(-&gt;) a</code> for any <code>a</code></li>
+<li><input type="checkbox" class="rb" name="q1" value="4"><code>(,) a</code> for any <code>a</code></li>
+<li><input type="checkbox" class="rb" name="q1" value="5"><code>[ ]</code></li>
+<li><input type="checkbox" class="rb" name="q1" value="6"><code>Gen</code></li>
+</ol>
+
+</div>
+
+<!-- NOTE 0 -->
+</div>
+</div>
+
+<div id="outline-container-org36f2463" class="outline-3">
+<h3 id="org36f2463"><span class="section-number-3">1.2</span> Question 2</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Consider the following data type definition for a non-empty list in Haskell.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell"><span class="org-keyword">data</span> <span class="org-type">NonEmptyList</span> a <span class="org-variable-name">=</span> <span class="org-type">One</span> a <span class="org-variable-name">|</span> <span class="org-type">Cons</span> a (<span class="org-type">NonEmptyList</span> a)
+</pre>
+</div>
+
+<p>
+Which of the following are law-abiding <code>Applicative</code> instances for <code>NonEmptyList</code>?
+</p>
+
+<div class="CHECK">
+<ol class="org-ol">
+<li><input type="checkbox" class="rb" name="q2" value="1"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-keyword">instance</span> <span class="org-type">Applicative</span> <span class="org-type">NonEmptyList</span> <span class="org-keyword">where</span>
+  pure x <span class="org-variable-name">=</span> <span class="org-type">Cons</span> x (pure x)
+  (<span class="org-type">One</span> f) <span class="org-variable-name">&lt;*&gt;</span> (<span class="org-type">One</span> x) <span class="org-variable-name">=</span> <span class="org-type">One</span> (f x)
+  (<span class="org-type">One</span> f) <span class="org-variable-name">&lt;*&gt;</span> (<span class="org-type">Cons</span> x <span class="org-keyword">_</span>) <span class="org-variable-name">=</span> <span class="org-type">One</span> (f x)
+  (<span class="org-type">Cons</span> f <span class="org-keyword">_</span>) <span class="org-variable-name">&lt;*&gt;</span> (<span class="org-type">One</span> x) <span class="org-variable-name">=</span> <span class="org-type">One</span> (f x)
+  (<span class="org-type">Cons</span> f fs) <span class="org-variable-name">&lt;*&gt;</span> (<span class="org-type">Cons</span> x xs) <span class="org-variable-name">=</span> <span class="org-type">Cons</span> (f x) (fs <span class="org-variable-name">&lt;*&gt;</span> xs)
+</pre>
+</div></li>
+<li><input type="checkbox" class="rb" name="q2" value="2"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-keyword">instance</span> <span class="org-type">Applicative</span> <span class="org-type">NonEmptyList</span> <span class="org-keyword">where</span>
+  pure x <span class="org-variable-name">=</span> <span class="org-type">One</span> x
+  (<span class="org-type">One</span> f) <span class="org-variable-name">&lt;*&gt;</span> (<span class="org-type">One</span> x) <span class="org-variable-name">=</span> <span class="org-type">One</span> (f x)
+  (<span class="org-type">One</span> f) <span class="org-variable-name">&lt;*&gt;</span> (<span class="org-type">Cons</span> x <span class="org-keyword">_</span>) <span class="org-variable-name">=</span> <span class="org-type">One</span> (f x)
+  (<span class="org-type">Cons</span> f <span class="org-keyword">_</span>) <span class="org-variable-name">&lt;*&gt;</span> (<span class="org-type">One</span> x) <span class="org-variable-name">=</span> <span class="org-type">One</span> (f x)
+  (<span class="org-type">Cons</span> f fs) <span class="org-variable-name">&lt;*&gt;</span> (<span class="org-type">Cons</span> x xs) <span class="org-variable-name">=</span> <span class="org-type">Cons</span> (f x) (fs <span class="org-variable-name">&lt;*&gt;</span> xs)
+</pre>
+</div></li>
+<li><input type="checkbox" class="rb" name="q2" value="3"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-keyword">instance</span> <span class="org-type">Applicative</span> <span class="org-type">NonEmptyList</span> <span class="org-keyword">where</span>
+  pure x <span class="org-variable-name">=</span> <span class="org-type">One</span> x
+  <span class="org-type">One</span> f <span class="org-variable-name">&lt;*&gt;</span> xs <span class="org-variable-name">=</span> fmap f xs 
+  (<span class="org-type">Cons</span> f fs) <span class="org-variable-name">&lt;*&gt;</span> xs <span class="org-variable-name">=</span> fmap f xs <span class="org-variable-name">`append`</span> (fs <span class="org-variable-name">&lt;*&gt;</span> xs)
+    <span class="org-keyword">where</span>
+     append (<span class="org-type">One</span> x) ys <span class="org-variable-name">=</span> <span class="org-type">Cons</span> x ys
+     append (<span class="org-type">Cons</span> x xs) ys <span class="org-variable-name">=</span> <span class="org-type">Cons</span> x (xs <span class="org-variable-name">`append`</span> ys)
+</pre>
+</div></li>
+<li><input type="checkbox" class="rb" name="q2" value="4"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-keyword">instance</span> <span class="org-type">Applicative</span> <span class="org-type">NonEmptyList</span> <span class="org-keyword">where</span>
+  pure x <span class="org-variable-name">=</span> <span class="org-type">Cons</span> x (pure x)
+  <span class="org-type">One</span> f <span class="org-variable-name">&lt;*&gt;</span> xs <span class="org-variable-name">=</span> fmap f xs 
+  (<span class="org-type">Cons</span> f fs) <span class="org-variable-name">&lt;*&gt;</span> xs <span class="org-variable-name">=</span> fmap f xs <span class="org-variable-name">`append`</span> (fs <span class="org-variable-name">&lt;*&gt;</span> xs)
+    <span class="org-keyword">where</span>
+     append (<span class="org-type">One</span> x) ys <span class="org-variable-name">=</span> <span class="org-type">Cons</span> x ys
+     append (<span class="org-type">Cons</span> x xs) ys <span class="org-variable-name">=</span> <span class="org-type">Cons</span> x (xs <span class="org-variable-name">`append`</span> ys)
+</pre>
+</div></li>
+</ol>
+
+</div>
+<!-- NOTE 1 -->
+</div>
+</div>
+
+<div id="outline-container-org018dc6c" class="outline-3">
+<h3 id="org018dc6c"><span class="section-number-3">1.3</span> Question 3</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Suppose I wanted to write a function <code>pair</code>, which takes two <code>Applicative</code> data structures and combines them in a tuple, of type:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">pair</span> <span class="org-variable-name">::</span> (<span class="org-type">Applicative</span> f) <span class="org-variable-name">=&gt;</span> f a <span class="org-variable-name">-&gt;</span> f b <span class="org-variable-name">-&gt;</span> f (a, b)
+</pre>
+</div>
+
+<p>
+Select all correct implementations of <code>pair</code>.
+</p>
+
+<div class="CHECK">
+<ol class="org-ol">
+<li><input type="checkbox" class="rb" name="q3" value="1"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">pair</span> fa fb <span class="org-variable-name">=</span> pure fa <span class="org-variable-name">&lt;*&gt;</span> pure fb
+</pre>
+</div></li>
+<li><input type="checkbox" class="rb" name="q3" value="2"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">pair</span> fa fb <span class="org-variable-name">=</span> pure <span class="org-type">(,)</span> <span class="org-variable-name">&lt;*&gt;</span> pure fa <span class="org-variable-name">&lt;*&gt;</span> pure fb
+</pre>
+</div></li>
+<li><input type="checkbox" class="rb" name="q3" value="3"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">pair</span> fa fb <span class="org-variable-name">=</span> pure <span class="org-type">(,)</span> <span class="org-variable-name">&lt;*&gt;</span> fa <span class="org-variable-name">&lt;*&gt;</span> fb
+</pre>
+</div></li>
+<li><input type="checkbox" class="rb" name="q3" value="4"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">pair</span> fa fb <span class="org-variable-name">=</span> fmap <span class="org-type">(,)</span> fa <span class="org-variable-name">&lt;*&gt;</span> fb
+</pre>
+</div></li>
+<li><input type="checkbox" class="rb" name="q3" value="5">There is no way to implement this function.</li>
+</ol>
+
+</div>
+<!-- NOTE 2 -->
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org30d9959" class="outline-2">
+<h2 id="org30d9959"><span class="section-number-2">2</span> Monads</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org1e4078c" class="outline-3">
+<h3 id="org1e4078c"><span class="section-number-3">2.1</span> Question 4</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Which of the following type definitions are examples of <code>Monad</code>, or admit
+law-abiding <code>Monad</code> instances?
+</p>
+
+<div class="CHECK">
+<ol class="org-ol">
+<li><input type="checkbox" class="rb" name="q4" value="1"><code>Maybe</code></li>
+<li><input type="checkbox" class="rb" name="q4" value="2"><code>String</code></li>
+<li><input type="checkbox" class="rb" name="q4" value="3"><code>(-&gt;) a</code> for any <code>a</code></li>
+<li><input type="checkbox" class="rb" name="q4" value="4"><code>(,) a</code> for any <code>a</code></li>
+<li><input type="checkbox" class="rb" name="q4" value="5"><code>[ ]</code></li>
+<li><input type="checkbox" class="rb" name="q4" value="6"><code>Gen</code></li>
+</ol>
+
+</div>
+
+<!-- NOTE 3 -->
+</div>
+</div>
+
+<div id="outline-container-org6328bde" class="outline-3">
+<h3 id="org6328bde"><span class="section-number-3">2.2</span> Question 5</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+We wish to write a function <code>s</code> of type <code>[m a] -&gt; m [a]</code>, for any monad <code>m</code>. 
+It will unpack each given value of type <code>m a</code> and collect their results into a list.
+Which of the following is a correct implementation
+of this function?
+</p>
+
+<div class="MULTI">
+<ol class="org-ol">
+<li><input type="radio" class="rb" name="q5" value="1"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">s</span> <span class="org-variable-name">::</span> <span class="org-type">Monad</span> m <span class="org-variable-name">=&gt;</span> [m a] <span class="org-variable-name">-&gt;</span> m [a]
+<span class="org-function-name">s</span> <span class="org-type">[]</span> <span class="org-variable-name">=</span> <span class="org-type">[]</span>
+<span class="org-function-name">s</span> (a<span class="org-type">:</span>as) <span class="org-variable-name">=</span> <span class="org-keyword">do</span>
+  x <span class="org-variable-name">&lt;-</span> a
+  xs <span class="org-variable-name">&lt;-</span> s as
+  return (x <span class="org-type">:</span> xs)
+</pre>
+</div></li>
+<li><input type="radio" class="rb" name="q5" value="2"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">s</span> <span class="org-variable-name">::</span> <span class="org-type">Monad</span> m <span class="org-variable-name">=&gt;</span> [m a] <span class="org-variable-name">-&gt;</span> m [a]
+<span class="org-function-name">s</span> <span class="org-type">[]</span> <span class="org-variable-name">=</span> return <span class="org-type">[]</span>
+<span class="org-function-name">s</span> (a<span class="org-type">:</span>as) <span class="org-variable-name">=</span> <span class="org-keyword">do</span>
+  x <span class="org-variable-name">&lt;-</span> a
+  xs <span class="org-variable-name">&lt;-</span> as
+  return (x <span class="org-type">:</span> xs)
+</pre>
+</div></li>
+<li><input type="radio" class="rb" name="q5" value="3"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">s</span> <span class="org-variable-name">::</span> <span class="org-type">Monad</span> m <span class="org-variable-name">=&gt;</span> [m a] <span class="org-variable-name">-&gt;</span> m [a]
+<span class="org-function-name">s</span> <span class="org-type">[]</span> <span class="org-variable-name">=</span> return <span class="org-type">[]</span>
+<span class="org-function-name">s</span> (a<span class="org-type">:</span>as) <span class="org-variable-name">=</span> <span class="org-keyword">do</span>
+  x <span class="org-variable-name">&lt;-</span> a
+  xs <span class="org-variable-name">&lt;-</span> s as
+  return (x <span class="org-type">:</span> xs)
+</pre>
+</div></li>
+<li><input type="radio" class="rb" name="q5" value="4"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">s</span> <span class="org-variable-name">::</span> <span class="org-type">Monad</span> m <span class="org-variable-name">=&gt;</span> [m a] <span class="org-variable-name">-&gt;</span> m [a]
+<span class="org-function-name">s</span> <span class="org-type">[]</span> <span class="org-variable-name">=</span> return <span class="org-type">[]</span>
+<span class="org-function-name">s</span> (a<span class="org-type">:</span>as) <span class="org-variable-name">=</span> <span class="org-keyword">do</span>
+  a
+  s as
+  return (a <span class="org-type">:</span> as)
+</pre>
+</div></li>
+</ol>
+
+</div>
+<!-- NOTE 4 -->
+</div>
+</div>
+</div>
+
+<div id="outline-container-org727f954" class="outline-2">
+<h2 id="org727f954"><span class="section-number-2">3</span> Functor, Monad, Applicative</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org91028b5" class="outline-3">
+<h3 id="org91028b5"><span class="section-number-3">3.1</span> Question 6</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Which of the following are correct definitions of the <i>usual</i> <code>&lt;*&gt;</code> operation
+for the type <code>[a]</code>?
+</p>
+
+<div class="CHECK">
+<ol class="org-ol">
+<li><input type="checkbox" class="rb" name="q6" value="1"><div class="org-src-container">
+<pre class="src src-haskell">fs <span class="org-function-name">&lt;*&gt;</span> xs <span class="org-variable-name">=</span> <span class="org-keyword">do</span>
+  f <span class="org-variable-name">&lt;-</span> fs
+  x <span class="org-variable-name">&lt;-</span> xs
+  return (f x)
+</pre>
+</div></li>
+<li><input type="checkbox" class="rb" name="q6" value="2"><div class="org-src-container">
+<pre class="src src-haskell">fs <span class="org-function-name">&lt;*&gt;</span> xs <span class="org-variable-name">=</span> [f x <span class="org-variable-name">|</span> f <span class="org-variable-name">&lt;-</span> fs, x <span class="org-variable-name">&lt;-</span> xs]
+</pre>
+</div></li>
+<li><input type="checkbox" class="rb" name="q6" value="3"><div class="org-src-container">
+<pre class="src src-haskell">fs <span class="org-function-name">&lt;*&gt;</span> xs <span class="org-variable-name">=</span>
+  fs <span class="org-variable-name">&gt;&gt;=</span> <span class="org-variable-name">\</span>f <span class="org-variable-name">-&gt;</span>
+  xs <span class="org-variable-name">&gt;&gt;=</span> <span class="org-variable-name">\</span>x <span class="org-variable-name">-&gt;</span>
+  [f x]
+</pre>
+</div></li>
+<li><input type="checkbox" class="rb" name="q6" value="4"><div class="org-src-container">
+<pre class="src src-haskell">fs <span class="org-function-name">&lt;*&gt;</span> xs <span class="org-variable-name">=</span>
+  fs <span class="org-variable-name">&gt;&gt;=</span> <span class="org-variable-name">\</span>f <span class="org-variable-name">-&gt;</span>
+  xs <span class="org-variable-name">&gt;&gt;=</span> <span class="org-variable-name">\</span>x <span class="org-variable-name">-&gt;</span>
+  f x
+</pre>
+</div></li>
+</ol>
+
+</div>
+<!-- NOTE 5 -->
+</div>
+</div>
+
+<div id="outline-container-org75ed179" class="outline-3">
+<h3 id="org75ed179"><span class="section-number-3">3.2</span> Question 7</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Recall that two functions are considered equal if they have the same output for every
+input. Select all the true statements below.
+</p>
+
+<div class="CHECK">
+<ol class="org-ol">
+<li><input type="checkbox" class="rb" name="q7" value="1">Kleisli composition is not well-defined in the <code>Maybe</code> monad.</li>
+<li><input type="checkbox" class="rb" name="q7" value="2">Every monad <code>m</code> and every function <code>f :: a -&gt; m a</code> satisfies the equality <code>f &lt;=&lt; f = f</code>.</li>
+<li><input type="checkbox" class="rb" name="q7" value="3">Every instance of <code>Applicative</code> has to be an instance of <code>Monad</code> as well.</li>
+<li><input type="checkbox" class="rb" name="q7" value="4">Every instance of <code>Monad</code> has to be an instance of <code>Functor</code> as well.</li>
+</ol>
+
+</div>
+<!-- NOTE 6 -->
+</div>
+</div>
+
+
+<div id="outline-container-orge2d0fe3" class="outline-3">
+<h3 id="orge2d0fe3"><span class="section-number-3">3.3</span> Question 8</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+If a given unary type <code>m</code> is both a <code>Monad</code> instance and a <code>Functor</code> instance, which of the following would
+definitely be correct implementations of <code>fmap :: (a -&gt; b) -&gt; m a -&gt; m b</code>?
+</p>
+
+
+<div class="CHECK">
+<ol class="org-ol">
+<li><input type="checkbox" class="rb" name="q8" value="1"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">fmap</span> f <span class="org-type">[]</span> <span class="org-variable-name">=</span> <span class="org-type">[]</span>
+<span class="org-function-name">fmap</span> f (x<span class="org-type">:</span>xs) <span class="org-variable-name">=</span> map f xs 
+</pre>
+</div></li>
+<li><input type="checkbox" class="rb" name="q8" value="2"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">fmap</span> f <span class="org-variable-name">=</span> (<span class="org-variable-name">&lt;$&gt;</span>) f
+</pre>
+</div></li>
+<li><input type="checkbox" class="rb" name="q8" value="3"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">fmap</span> f xs <span class="org-variable-name">=</span> f <span class="org-variable-name">&lt;*&gt;</span> xs
+</pre>
+</div></li>
+<li><input type="checkbox" class="rb" name="q8" value="4"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">fmap</span> f xs <span class="org-variable-name">=</span>
+  xs <span class="org-variable-name">&gt;&gt;=</span> <span class="org-variable-name">\</span>x <span class="org-variable-name">-&gt;</span> return (f x) 
+</pre>
+</div></li>
+</ol>
+
+</div>
+<!-- NOTE 7 -->
+</div>
+</div>
+</div>
+<div class="submission_box"><b>Due</b>: Thursday, July 21, 11:59:59 PM<br><small>Upon clicking submit, you will be prompted for your zID and zPass. Please make sure that your answers are final and that you have answered every question.<br>If there is a problem, please contact the course administrator.<br></small><center><input class="submitbutton" value="Submit" type="submit"><br><br><small></small></center><small>You can click <a href="https://cgi.cse.unsw.edu.au/~cs3141/cgi-bin/gal/22T2/submit_quiz?quizname=quiz06">here</a> to check if you have submitted already.</small></div></form></div>
+<div id="postamble" class="status">
+<p class="date"> 2022-07-14 Thu 17:06 </p><small><a type="application/rss+xml" href="https://www.cse.unsw.edu.au/~cs3141/22T2/index.xml">Announcements RSS</a></small>
+</div>
+
+
+<a class="back-to-top" href="javascript:scroll(0, 0);"><i></i>Back to top</a></body></html>

@@ -1,0 +1,16 @@
+name: Lecture8
+version: 1.0
+cabal-version: >= 1.11
+build-type: Simple
+license: AllRightsReserved
+stability: experimental
+x-ghc-framework-version: 8.0.2-8.9-3
+x-last-ide-version: HfM1.5.1
+Executable Lecture8.hs
+  main-is: Lecture8.hs
+  buildable: True
+  build-depends:
+      base -any,
+      parallel -any,
+      mtl -any,
+      QuickCheck -any

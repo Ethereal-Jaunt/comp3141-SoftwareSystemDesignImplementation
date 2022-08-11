@@ -1,0 +1,730 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0059)http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="wf-opensans-n4-active wf-ptserif-n4-active wf-ptserif-i4-active wf-active show"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 2022-06-24 Fri 21:06 -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz (Week 4)</title>
+<meta name="generator" content="Org mode">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="./Quiz (Week 4)_files/bundle.css"><link rel="alternate" type="application/rss+xml" href="https://www.cse.unsw.edu.au/~cs3141/22T2/index.xml" title="RSS for announcements"><script src="./Quiz (Week 4)_files/webfont.js.下载" type="text/javascript" async=""></script><script src="./Quiz (Week 4)_files/bundle.js.下载" type="text/javascript"></script><script src="./Quiz (Week 4)_files/collapses.js.下载" type="text/javascript"></script>
+                                       
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script><link rel="stylesheet" href="./Quiz (Week 4)_files/css" media="all">
+</head>
+<body>
+<div id="preamble" class="status">
+<img src="./Quiz (Week 4)_files/title.png" alt="COMP3141 Software System Design and Implementation" style="position:absolute; left:0px; top:0px; z-index:-1;max-width:800px;width:100%;">
+<p style="text-align:center; font-weight:bold; display:block;">COMP3141: Software System Design and Implementation</p>
+<small style="text-align:center; display:block;">Term 2, 2022</small>
+<hr>
+<ul class="org-ul collapsibleList">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Forum.html">Course Forum</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/index.html">Home</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Zoom.html">Lectures on Zoom</a></li>
+<li style="user-select: none;"><a href="https://webcms3.cse.unsw.edu.au/COMP3141/22T2/outline">Outline</a></li>
+<li style="user-select: none;"><a href="https://www.youtube.com/watch?v=ydebMkfwh7c&amp;list=PL6TClpxvoMHgi9LAf9wesaMJ7syT_JcJ9&amp;index=1">Recorded Lectures</a></li>
+<li style="user-select: none;"><a href="https://webcms3.cse.unsw.edu.au/COMP3141/22T2/resources/74691#schedule">Schedule</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/HaskellSetup.html">Setting up Haskell</a></li>
+<li class="collapsibleListClosed" style="user-select: none;">Assignment 1
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Assignment%2001/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Assignment%2001/Specification.pdf">Specification</a></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Week 1
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2001/Quiz.html">Quiz </a></li>
+<li class="collapsibleListClosed" style="user-select: none;">Lecture
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2001/Lecture/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2001/Lecture/Slides.pdf">Slides</a></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Practical
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2001/Practical/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2001/Practical/Slides.pdf">Slides</a></li>
+</ul></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Week 2
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/">Assigned Reading</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2002/Exercise.html">Exercise </a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2002/Quiz.html">Quiz </a></li>
+<li class="collapsibleListClosed" style="user-select: none;">Lecture
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2002/Lecture/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2002/Lecture/Slides.pdf">Slides</a></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Practical
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2002/Practical/Code.tar.gz">Code.tar</a></li>
+</ul></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Week 3
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2003/Exercise.html">Exercise </a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2003/Quiz.html">Quiz </a></li>
+<li class="collapsibleListClosed" style="user-select: none;">Lecture
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2003/Lecture/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2003/Lecture/Slides.pdf">Slides</a></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Practical
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2003/Practical/Code.tar.gz">Code.tar</a></li>
+</ul></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Week 4
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Exercise.html">Exercise </a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html">Quiz </a></li>
+<li class="collapsibleListClosed" style="user-select: none;">Lecture
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Lecture/Code.tar.gz">Code.tar</a></li>
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Lecture/Slides.pdf">Slides</a></li>
+</ul></li>
+<li class="collapsibleListClosed" style="user-select: none;">Practical
+<ul class="org-ul collapsibleList" style="display: none;">
+<li style="user-select: none;"><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Practical/Code.tar.gz">Code.tar</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<script type="text/javascript">CollapsibleLists.apply();</script>
+</div>
+<div id="content">
+<h1 class="title">Quiz (Week 4)</h1>
+<form method="POST" action="https://cgi.cse.unsw.edu.au/~cs3141/cgi-bin/gal/22T2/submit_quiz"><input type="hidden" name="quizname" value="quiz04"><div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#org951b23e">1. Minimal Specifications</a>
+<ul>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#orge81ab8f">1.1. Question 1</a></li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#org63af382">1.2. Question 2</a></li>
+</ul>
+</li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#orga2d8fc9">2. Data Invariants</a>
+<ul>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#orga9ef42b">2.1. Question 3</a></li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#org1dbb0cb">2.2. Question 4</a></li>
+</ul>
+</li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#org50cc89b">3. Data Refinement</a>
+<ul>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#org5e5c4c2">3.1. Question 5</a></li>
+</ul>
+</li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#orgcb1d492">4. More on Testing Properties</a>
+<ul>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#org8f75733">4.1. Question 6</a></li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#org756591a">4.2. Question 7</a></li>
+<li><a href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#org6531d5e">4.3. Question 8</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org951b23e" class="outline-2">
+<h2 id="org951b23e"><span class="section-number-2">1</span> Minimal Specifications</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orge81ab8f" class="outline-3">
+<h3 id="orge81ab8f"><span class="section-number-3">1.1</span> Question 1</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Let <code>gcd :: Int -&gt; Int -&gt; Int</code> denote the function that returns the greatest
+common divisors of its inputs. The <code>gcd</code> function satisfies the following
+list of properties for all nonnegative input numbers <code>x</code> and <code>y</code>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">p1</span> x y <span class="org-variable-name">=</span> gcd x y <span class="org-variable-name">==</span> gcd y x
+<span class="org-function-name">p2</span> x <span class="org-variable-name">=</span> gcd x 0 <span class="org-variable-name">==</span> gcd x x
+<span class="org-function-name">p3</span> x y <span class="org-variable-name">=</span> gcd x (x <span class="org-variable-name">*</span> y) <span class="org-variable-name">==</span> gcd x x
+<span class="org-function-name">p4</span> x y <span class="org-variable-name">=</span> gcd x (gcd y x) <span class="org-variable-name">==</span> gcd x y
+<span class="org-function-name">p5</span> x <span class="org-variable-name">=</span> gcd x 1 <span class="org-variable-name">==</span> gcd 1 1
+</pre>
+</div>
+
+<p>
+However, running tests for all of these properties takes too long for
+the impatient programmer. This is because many of these properties are logically <i>redundant</i>.
+If property A logically implies property B, then testing for property B is unlikely to fail
+when testing for property A has already passed.
+</p>
+
+<p>
+Choose a subset of the properties above that, together with the usual laws of arithmetic
+involving addition and multiplication, imply all of the others, but do not contain any redundant properties.
+</p>
+
+<p>
+<i>Hint</i>: Think about possible implementations of a function <code>f</code> that would fail the above properties.
+If you can't write an implementation that fails a given property but passes all of
+the others, it's a good indication that the property is redundant.
+</p>
+
+<div class="MULTI">
+<ol class="org-ol">
+<li><input type="radio" class="rb" name="q1" value="1"><code>p3</code> alone,</li>
+<li><input type="radio" class="rb" name="q1" value="2"><code>p1</code> and <code>p2</code>,</li>
+<li><input type="radio" class="rb" name="q1" value="3"><code>p1</code>, <code>p2</code> and <code>p3</code>,</li>
+<li><input type="radio" class="rb" name="q1" value="4"><code>p1</code>, <code>p3</code> and <code>p4</code>,</li>
+<li><input type="radio" class="rb" name="q1" value="5"><code>p1</code>, <code>p3</code> and <code>p5</code>,</li>
+<li><input type="radio" class="rb" name="q1" value="6"><code>p1</code>, <code>p2</code>, <code>p3</code>, <code>p4</code> and <code>p5</code>.</li>
+</ol>
+
+</div>
+<!-- NOTE 0 -->
+</div>
+</div>
+
+
+<div id="outline-container-org63af382" class="outline-3">
+<h3 id="org63af382"><span class="section-number-3">1.2</span> Question 2</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Here's a standard (inefficient) reverse function for lists, and a collection of
+QuickCheck properties to specify it.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">rev</span> <span class="org-variable-name">::</span> [<span class="org-type">Int</span>] <span class="org-variable-name">-&gt;</span> [<span class="org-type">Int</span>]
+<span class="org-function-name">rev</span> (x<span class="org-type">:</span>xs) <span class="org-variable-name">=</span> rev xs <span class="org-variable-name">++</span> [x]
+<span class="org-function-name">rev</span> <span class="org-type">[]</span>     <span class="org-variable-name">=</span> <span class="org-type">[]</span>
+
+<span class="org-function-name">prop_1</span> <span class="org-variable-name">::</span> [<span class="org-type">Int</span>] <span class="org-variable-name">-&gt;</span>  <span class="org-type">Bool</span>
+<span class="org-function-name">prop_1</span> xs <span class="org-variable-name">=</span> length (rev xs) <span class="org-variable-name">==</span> length xs
+
+<span class="org-function-name">prop_2</span> <span class="org-variable-name">::</span> [<span class="org-type">Int</span>] <span class="org-variable-name">-&gt;</span> [<span class="org-type">Int</span>] <span class="org-variable-name">-&gt;</span> <span class="org-type">Bool</span>
+<span class="org-function-name">prop_2</span> xs ys <span class="org-variable-name">=</span> rev (xs <span class="org-variable-name">++</span> ys) <span class="org-variable-name">==</span> rev ys <span class="org-variable-name">++</span> rev xs
+
+<span class="org-function-name">prop_3</span> <span class="org-variable-name">::</span> [<span class="org-type">Int</span>] <span class="org-variable-name">-&gt;</span> <span class="org-type">Int</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Bool</span>
+<span class="org-function-name">prop_3</span> xs x <span class="org-variable-name">=</span> count x xs <span class="org-variable-name">==</span> count x (rev xs)
+  <span class="org-keyword">where</span>
+    count x xs <span class="org-variable-name">=</span> length (filter (<span class="org-variable-name">==</span> x) xs)
+</pre>
+</div>
+
+<p>
+Which of the above properties is redundant given the other two?
+</p>
+
+<div class="MULTI">
+<ol class="org-ol">
+<li><input type="radio" class="rb" name="q2" value="1"><code>prop_1</code></li>
+<li><input type="radio" class="rb" name="q2" value="2"><code>prop_2</code></li>
+<li><input type="radio" class="rb" name="q2" value="3"><code>prop_3</code></li>
+<li><input type="radio" class="rb" name="q2" value="4">None of the above.</li>
+</ol>
+
+</div>
+<!-- NOTE 1 -->
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga2d8fc9" class="outline-2">
+<h2 id="orga2d8fc9"><span class="section-number-2">2</span> Data Invariants</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+We have decided to represent <i>undirected graphs</i> using <i>adjacency matrices</i>.  For example, a graph of four nodes
+arranged in a rectangle:
+</p>
+
+<pre class="example">0 ----- 1
+|       |
+|       |
+2 ----- 3
+</pre>
+
+<p>
+Would be represented as the matrix:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell"><span class="org-keyword">type</span> <span class="org-type">Graph</span> <span class="org-variable-name">=</span> [[<span class="org-type">Bool</span>]]
+
+<span class="org-function-name">m</span> <span class="org-variable-name">::</span> <span class="org-type">Graph</span>
+<span class="org-function-name">m</span> <span class="org-variable-name">=</span> [[<span class="org-type">False</span>, <span class="org-type">True</span>,  <span class="org-type">True</span>,  <span class="org-type">False</span>],
+     [<span class="org-type">True</span>,  <span class="org-type">False</span>, <span class="org-type">False</span>, <span class="org-type">True</span> ],
+     [<span class="org-type">True</span>,  <span class="org-type">False</span>, <span class="org-type">False</span>, <span class="org-type">True</span> ],
+     [<span class="org-type">False</span>, <span class="org-type">True</span>,  <span class="org-type">True</span>,  <span class="org-type">False</span>]]
+</pre>
+</div>
+
+<p>
+That is, the value <code class="src src-haskell">(m <span class="org-variable-name">!!</span> a) <span class="org-variable-name">!!</span> b</code> is <code>True</code> iff the node numbered <code>a</code> is connected to the node numbered <code>b</code>.
+</p>
+</div>
+
+<div id="outline-container-orga9ef42b" class="outline-3">
+<h3 id="orga9ef42b"><span class="section-number-3">2.1</span> Question 3</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Select all data invariants that should apply to our <code>Graph</code> type, assuming <code class="src src-haskell"><span class="org-function-name">g</span> <span class="org-variable-name">::</span> <span class="org-type">Graph</span></code>:
+</p>
+<div class="CHECK">
+<ol class="org-ol">
+<li><input type="checkbox" class="rb" name="q3" value="1"><code>transpose g == g</code></li>
+<li><input type="checkbox" class="rb" name="q3" value="2"><code>all or g</code></li>
+<li><input type="checkbox" class="rb" name="q3" value="3"><code>all (\x -&gt; length x == length g) g</code></li>
+<li><input type="checkbox" class="rb" name="q3" value="4"><code>map reverse g == g</code></li>
+</ol>
+
+</div>
+<!-- NOTE 2 -->
+</div>
+</div>
+
+<div id="outline-container-org1dbb0cb" class="outline-3">
+<h3 id="org1dbb0cb"><span class="section-number-3">2.2</span> Question 4</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+We have the following graph operations:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">newGraph</span> <span class="org-variable-name">::</span> <span class="org-type">Int</span> <span class="org-comment-delimiter">-- </span><span class="org-comment">number of nodes</span>
+         <span class="org-variable-name">-&gt;</span> <span class="org-type">Graph</span>
+<span class="org-function-name">newGraph</span> n <span class="org-variable-name">=</span> replicate n (replicate n <span class="org-type">False</span>)
+
+<span class="org-function-name">connected</span> <span class="org-variable-name">::</span> <span class="org-type">Graph</span> <span class="org-variable-name">-&gt;</span> (<span class="org-type">Int</span>, <span class="org-type">Int</span>) <span class="org-variable-name">-&gt;</span> <span class="org-type">Bool</span>
+<span class="org-function-name">connected</span> g (x, y) <span class="org-variable-name">|</span> x <span class="org-variable-name">&lt;</span> length g <span class="org-variable-name">&amp;&amp;</span> y <span class="org-variable-name">&lt;</span> length g <span class="org-variable-name">=</span> (g <span class="org-variable-name">!!</span> x) <span class="org-variable-name">!!</span> y 
+                   <span class="org-variable-name">|</span> otherwise                    <span class="org-variable-name">=</span> <span class="org-type">False</span>
+
+<span class="org-function-name">connect</span> <span class="org-variable-name">::</span> (<span class="org-type">Int</span>, <span class="org-type">Int</span>) <span class="org-variable-name">-&gt;</span> <span class="org-type">Graph</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Graph</span>
+<span class="org-function-name">connect</span> (x, y) <span class="org-variable-name">=</span> modify y (modify x (<span class="org-variable-name">\</span><span class="org-keyword">_</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">True</span>)) <span class="org-variable-name">.</span> modify x (modify y (<span class="org-variable-name">\</span><span class="org-keyword">_</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">True</span>))
+  <span class="org-keyword">where</span>
+    modify <span class="org-variable-name">::</span> <span class="org-type">Int</span> <span class="org-variable-name">-&gt;</span> (a <span class="org-variable-name">-&gt;</span> a) <span class="org-variable-name">-&gt;</span> [a] <span class="org-variable-name">-&gt;</span> [a]
+    modify 0 f (x<span class="org-type">:</span>xs) <span class="org-variable-name">=</span> f x <span class="org-type">:</span> xs
+    modify n f (x<span class="org-type">:</span>xs) <span class="org-variable-name">=</span> x <span class="org-type">:</span> modify (n <span class="org-variable-name">-</span> 1) f xs
+    modify n f <span class="org-type">[]</span>     <span class="org-variable-name">=</span> <span class="org-type">[]</span>
+</pre>
+</div>
+
+<p>
+We have defined a wellformedness predicate for our data invariants, called <code>wellformed</code>.
+Select the properties we should assert about our operations<sup><a id="fnr.1" class="footref" href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#fn.1">1</a></sup>.
+</p>
+<div class="CHECK">
+<ol class="org-ol">
+<li><input type="checkbox" class="rb" name="q4" value="1"><code class="src src-haskell"><span class="org-function-name">wellformed</span> (newGraph n)</code></li>
+<li><input type="checkbox" class="rb" name="q4" value="2"><code class="src src-haskell"><span class="org-function-name">wellformed</span> (connect x y g) <span class="org-variable-name">==&gt;</span> wellformed g</code></li>
+<li><input type="checkbox" class="rb" name="q4" value="3"><code class="src src-haskell"><span class="org-function-name">wellformed</span> (connect x y g)</code></li>
+<li><input type="checkbox" class="rb" name="q4" value="4"><code class="src src-haskell"><span class="org-function-name">wellformed</span> g <span class="org-variable-name">==&gt;</span> wellformed (connect x y g)</code></li>
+</ol>
+
+</div>
+<!-- NOTE 3 -->
+</div>
+</div>
+</div>
+
+<div id="outline-container-org50cc89b" class="outline-2">
+<h2 id="org50cc89b"><span class="section-number-2">3</span> Data Refinement</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+We now build a different model, where we think of our graph as a pair of an edge list and an integer
+counting the overall number of nodes in the graph. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell"><span class="org-keyword">data</span> <span class="org-type">Model</span> <span class="org-variable-name">=</span> <span class="org-type">M</span> <span class="org-type">Int</span> [(<span class="org-type">Int</span>, <span class="org-type">Int</span>)]
+
+<span class="org-function-name">newGraphA</span> <span class="org-variable-name">::</span> <span class="org-type">Int</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Model</span>
+<span class="org-function-name">newGraphA</span> n <span class="org-variable-name">=</span> <span class="org-type">M</span> n <span class="org-type">[]</span>
+
+<span class="org-function-name">connectedA</span> <span class="org-variable-name">::</span> <span class="org-type">Model</span> <span class="org-variable-name">-&gt;</span> (<span class="org-type">Int</span>, <span class="org-type">Int</span>) <span class="org-variable-name">-&gt;</span> <span class="org-type">Bool</span>
+<span class="org-function-name">connectedA</span> (<span class="org-type">M</span> n es) (x,y) <span class="org-variable-name">=</span> (x,y) <span class="org-variable-name">`elem`</span> es
+
+<span class="org-function-name">connectA</span> <span class="org-variable-name">::</span> (<span class="org-type">Int</span>, <span class="org-type">Int</span>) <span class="org-variable-name">-&gt;</span> <span class="org-type">Model</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Model</span>
+<span class="org-function-name">connectA</span> (x, y) (<span class="org-type">M</span> n es) 
+  <span class="org-variable-name">|</span> x <span class="org-variable-name">&lt;</span> n <span class="org-variable-name">&amp;&amp;</span> y <span class="org-variable-name">&lt;</span> n <span class="org-variable-name">=</span> <span class="org-type">M</span> n ((x,y)<span class="org-type">:</span>(y,x)<span class="org-type">:</span>es)
+  <span class="org-variable-name">|</span> otherwise      <span class="org-variable-name">=</span> <span class="org-type">M</span> n es 
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org5e5c4c2" class="outline-3">
+<h3 id="org5e5c4c2"><span class="section-number-3">3.1</span> Question 5</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Which one of these relations holds between our <code>Model</code> and <code>Graph</code> data types precisely if they represent
+the same graph?
+</p>
+
+<div class="MULTI">
+<ol class="org-ol">
+<li><input type="radio" class="rb" name="q5" value="1"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">ref</span> <span class="org-variable-name">::</span> <span class="org-type">Graph</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Model</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Bool</span>
+<span class="org-function-name">ref</span> g (<span class="org-type">M</span> n es) <span class="org-variable-name">=</span> length g <span class="org-variable-name">==</span> n
+              <span class="org-variable-name">&amp;&amp;</span> all (<span class="org-variable-name">\</span>(x,y) <span class="org-variable-name">-&gt;</span> (g <span class="org-variable-name">!!</span> x) <span class="org-variable-name">!!</span> y) es
+</pre>
+</div></li>
+<li><input type="radio" class="rb" name="q5" value="2"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">ref</span> <span class="org-variable-name">::</span> <span class="org-type">Graph</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Model</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Bool</span>
+<span class="org-function-name">ref</span> g (<span class="org-type">M</span> n es) <span class="org-variable-name">=</span> all (<span class="org-variable-name">\</span>(x,y) <span class="org-variable-name">-&gt;</span> ((x,y) <span class="org-variable-name">`elem`</span> es) <span class="org-variable-name">==</span> ((g <span class="org-variable-name">!!</span> x) <span class="org-variable-name">!!</span> y))
+                     [(x,y) <span class="org-variable-name">|</span> x <span class="org-variable-name">&lt;-</span> [0<span class="org-variable-name">..</span>n<span class="org-variable-name">-</span>1], y <span class="org-variable-name">&lt;-</span> [0<span class="org-variable-name">..</span>n<span class="org-variable-name">-</span>1]]
+</pre>
+</div></li>
+<li><input type="radio" class="rb" name="q5" value="3"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">ref</span> <span class="org-variable-name">::</span> <span class="org-type">Graph</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Model</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Bool</span>
+<span class="org-function-name">ref</span> g (<span class="org-type">M</span> n es) <span class="org-variable-name">=</span> length g <span class="org-variable-name">==</span> n 
+              <span class="org-variable-name">&amp;&amp;</span> any (<span class="org-variable-name">\</span>(x,y) <span class="org-variable-name">-&gt;</span> ((x,y) <span class="org-variable-name">`elem`</span> es) <span class="org-variable-name">==</span> ((g <span class="org-variable-name">!!</span> x) <span class="org-variable-name">!!</span> y))
+                     [(x,y) <span class="org-variable-name">|</span> x <span class="org-variable-name">&lt;-</span> [0<span class="org-variable-name">..</span>n], y <span class="org-variable-name">&lt;-</span> [0<span class="org-variable-name">..</span>n]] 
+</pre>
+</div></li>
+<li><input type="radio" class="rb" name="q5" value="4"><div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">ref</span> <span class="org-variable-name">::</span> <span class="org-type">Graph</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Model</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Bool</span>
+<span class="org-function-name">ref</span> g (<span class="org-type">M</span> n es) <span class="org-variable-name">=</span> length g <span class="org-variable-name">==</span> n 
+              <span class="org-variable-name">&amp;&amp;</span> all (<span class="org-variable-name">\</span>(x,y) <span class="org-variable-name">-&gt;</span> ((x,y) <span class="org-variable-name">`elem`</span> es) <span class="org-variable-name">==</span> ((g <span class="org-variable-name">!!</span> x) <span class="org-variable-name">!!</span> y))
+                     [(x,y) <span class="org-variable-name">|</span> x <span class="org-variable-name">&lt;-</span> [0<span class="org-variable-name">..</span>n<span class="org-variable-name">-</span>1], y <span class="org-variable-name">&lt;-</span> [0<span class="org-variable-name">..</span>n<span class="org-variable-name">-</span>1]] 
+</pre>
+</div></li>
+</ol>
+
+</div>
+<!-- NOTE 4 -->
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgcb1d492" class="outline-2">
+<h2 id="orgcb1d492"><span class="section-number-2">4</span> More on Testing Properties</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org8f75733" class="outline-3">
+<h3 id="org8f75733"><span class="section-number-3">4.1</span> Question 6</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Consider the <code>gcd</code> function from Question 1. Define the function
+</p>
+<div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">f</span> <span class="org-variable-name">::</span> <span class="org-type">Int</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Int</span>
+<span class="org-function-name">f</span> <span class="org-variable-name">=</span> gcd 2
+</pre>
+</div>
+
+<p>
+Which of the following testing strategies can be used to test <code>f</code>?
+</p>
+
+<div class="MULTI">
+<ol class="org-ol">
+<li><input type="radio" class="rb" name="q6" value="1">Invertibility</li>
+<li><input type="radio" class="rb" name="q6" value="2">Involution</li>
+<li><input type="radio" class="rb" name="q6" value="3">Idempotence</li>
+<li><input type="radio" class="rb" name="q6" value="4">All of the above</li>
+</ol>
+
+</div>
+<!-- NOTE 5 -->
+</div>
+</div>
+
+<div id="outline-container-org756591a" class="outline-3">
+<h3 id="org756591a"><span class="section-number-3">4.2</span> Question 7</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Which subsets of the following properties uniquely specify that <code>f</code> computes
+the <code>gcd</code> function for all nonnegative integer inputs?
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">p1</span> x <span class="org-variable-name">=</span> f 0 x <span class="org-variable-name">==</span> x
+<span class="org-function-name">p2</span> x y <span class="org-variable-name">=</span> f x y <span class="org-variable-name">==</span> f y x
+<span class="org-function-name">p3</span> x y <span class="org-variable-name">=</span> x <span class="org-variable-name">&lt;=</span> y <span class="org-variable-name">==&gt;</span> f x y <span class="org-variable-name">==</span> f x (y <span class="org-variable-name">-</span> x)
+<span class="org-function-name">p4</span> x y <span class="org-variable-name">=</span> x <span class="org-variable-name">&lt;=</span> y <span class="org-variable-name">==&gt;</span> f x y <span class="org-variable-name">==</span> f x (f x y)
+</pre>
+</div>
+
+<div class="CHECK">
+<ol class="org-ol">
+<li><input type="checkbox" class="rb" name="q7" value="1"><code>p1</code> and <code>p2</code>,</li>
+<li><input type="checkbox" class="rb" name="q7" value="2"><code>p1</code> and <code>p4</code>,</li>
+<li><input type="checkbox" class="rb" name="q7" value="3"><code>p1</code>, <code>p2</code> and <code>p3</code>,</li>
+<li><input type="checkbox" class="rb" name="q7" value="4"><code>p1</code>, <code>p2</code> and <code>p4</code></li>
+</ol>
+
+</div>
+<!-- NOTE 6 -->
+</div>
+</div>
+
+<div id="outline-container-org6531d5e" class="outline-3">
+<h3 id="org6531d5e"><span class="section-number-3">4.3</span> Question 8</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+The following code converts Haskell <code>Int</code> values to and from strings containing their hexadecimal representation (as sequences consisting only of the characters <code>'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'</code>).
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell"><span class="org-function-name">toHex</span> <span class="org-variable-name">::</span> <span class="org-type">Int</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">String</span>
+<span class="org-function-name">toHex</span> 0 <span class="org-variable-name">=</span> <span class="org-string">""</span>
+<span class="org-function-name">toHex</span> n <span class="org-variable-name">=</span>
+  <span class="org-keyword">let</span>
+    (d,r) <span class="org-variable-name">=</span> n <span class="org-variable-name">`divMod`</span> 16
+  <span class="org-keyword">in</span>
+    toHex d <span class="org-variable-name">++</span> [<span class="org-string">"0123456789ABCDEF"</span> <span class="org-variable-name">!!</span> r]
+
+<span class="org-function-name">fromHex</span> <span class="org-variable-name">::</span> <span class="org-type">String</span> <span class="org-variable-name">-&gt;</span> <span class="org-type">Int</span>
+<span class="org-function-name">fromHex</span> <span class="org-variable-name">=</span> fst <span class="org-variable-name">.</span> foldr eachChar (0,1)
+  <span class="org-keyword">where</span>
+    eachChar c (sum, m) <span class="org-variable-name">=</span>
+      <span class="org-keyword">case</span> elemIndex (toUpper c) <span class="org-string">"0123456789ABCDEF"</span> <span class="org-keyword">of</span>
+        <span class="org-type">Just</span> i  <span class="org-variable-name">-&gt;</span> (sum <span class="org-variable-name">+</span> i <span class="org-variable-name">*</span> m, m <span class="org-variable-name">*</span> 16)
+        <span class="org-type">Nothing</span> <span class="org-variable-name">-&gt;</span> (sum        , m <span class="org-variable-name">*</span> 16)
+</pre>
+</div>
+
+<p>
+Select all properties that these functions satisfy.
+</p>
+
+<div class="CHECK">
+<ol class="org-ol">
+<li><input type="checkbox" class="rb" name="q8" value="1"><code>i &gt;= 0 ==&gt; fromHex (toHex i) == i</code>,</li>
+<li><input type="checkbox" class="rb" name="q8" value="2"><code>i &gt; 0 ==&gt; length (toHex i) &lt;= length (show i)</code>,</li>
+<li><input type="checkbox" class="rb" name="q8" value="3"><code>all (`elem` "0123456789") s ==&gt; read s &lt;= fromHex s</code>,</li>
+<li><input type="checkbox" class="rb" name="q8" value="4"><code>all (`elem` "0123456789ABCDEF") s ==&gt; fromHex s == fromHex ('0':s)</code>.</li>
+</ol>
+
+</div>
+<!-- NOTE 7 -->
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="http://www.cse.unsw.edu.au/~cs3141/22T2/Week%2004/Quiz.html#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+: This is not the same as selecting the properties which are true. Which properties are necessary to maintain our data invariants?
+</p></div></div>
+
+
+</div>
+</div><div class="submission_box"><b>Due</b>: Thursday, June 30, 11:59:59 PM<br><small>Upon clicking submit, you will be prompted for your zID and zPass. Please make sure that your answers are final and that you have answered every question.<br>If there is a problem, please contact the course administrator.<br></small><center><input class="submitbutton" value="Submit" type="submit"><br><br><small></small></center><small>You can click <a href="https://cgi.cse.unsw.edu.au/~cs3141/cgi-bin/gal/22T2/submit_quiz?quizname=quiz04">here</a> to check if you have submitted already.</small></div></form></div>
+<div id="postamble" class="status">
+<p class="date"> 2022-06-24 Fri 21:06 </p><small><a type="application/rss+xml" href="https://www.cse.unsw.edu.au/~cs3141/22T2/index.xml">Announcements RSS</a></small>
+</div>
+
+
+<a class="back-to-top" href="javascript:scroll(0, 0);"><i></i>Back to top</a></body></html>
